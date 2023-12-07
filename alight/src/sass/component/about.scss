@@ -1,0 +1,56 @@
+.about-container{
+    .heads{
+        text-align: center;
+        padding: 2rem 1rem;
+        font-size: 4rem;
+        color: #11111180
+    }
+}
+
+
+
+.abouts{
+  @include flex(center,top,3rem);
+    padding:3rem 5rem;
+    width: 100%;
+
+    h1{
+        font-size: 3rem;
+        padding-bottom: 2rem;
+        color: #11111180;
+    }
+    p{
+        font-size: 1.8rem;
+        padding-bottom: 1.3rem;
+       
+    }
+    .head{
+        margin-left: 15%;
+    }
+    .serv{
+     
+        margin-left: 15%;
+
+    }
+
+}
+@media(max-width:1086px) {
+    .abouts{
+        display: flex;
+        flex-direction: column;
+   
+        padding: 0;
+
+        .about-image{
+            width: 100%;
+            padding: 0;
+            img{
+                width: 100%;
+                padding: 0;
+            }
+        }
+        .about-text{
+            padding: 1rem 5rem;
+        }
+    }
+}
