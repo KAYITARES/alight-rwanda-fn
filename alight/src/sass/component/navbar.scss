@@ -29,19 +29,66 @@
                     color: #F8AC3A;
                 }
             }
+
+      
         }
-        .search{
+        .searchs{
             padding: .8rem;
-            border-right: none;
-   
+            
+            
         }
         input{
-            border: 1px solid black;
+            border: 1px solid rgb(173, 147, 147);
+            position: relative;
+            padding: 2rem;
         }
-        button{
-         @include button(#F8AC3A,#eee)
-           
+     
+            .srch{
+                font-size: 3rem;
+                position: absolute;
+                right: 4rem;
+               
+            }
+   
+        @media(max-width:1170px) {
+            .navlinks{
+                @include flex(space-between,center,2rem);
+            }
         }
+        @media(max-width:1028px) {
+            .navlinks{
+                font-size: 1.5rem;
+                @include flex(space-between,center,2rem);
+            }
+        }
+        @media(max-width:950px) {
+            .navlinks{
+               display: none;
+            }
+        
+            
+        }
+        .menu{
+            display: none;
+        }
+        @media(max-width:950px) {
+
+            .menu{
+                font-size: 3rem;
+                display: flex;
+            }
+          .search{
+            display: none;
+          }
+         
+        }
+        @media (max-width:240px) {
+            .logo{
+                display: none;
+              }
+        }
+
+        
         
     }
    
