@@ -1,5 +1,8 @@
 import React from "react";
 import alight from '../assets/alight.jpeg'
+import MenuIcon from '@mui/icons-material/Menu';
+import TroubleshootIcon from '@mui/icons-material/Troubleshoot';
+
 
 function NavBar(){
     return(
@@ -45,8 +48,11 @@ function NavBar(){
                         <li><a href="@" className="link">Jobs</a></li>
                     </ul>
                     <div className="search">
-                        <input type="search" name="search" className="search" placeholder="search..." /><button>search</button>
+                        <input type="search" name="search" className="searchs" placeholder="search..." /><TroubleshootIcon className="srch"/> 
                     </div>
+                    <TroubleshootIcon className="menu"/>
+                    <MenuIcon className="menu"/>
+           
                 </div>
             </div>
         </nav>
