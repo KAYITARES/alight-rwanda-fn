@@ -2,8 +2,14 @@ import React from "react";
 import alight from '../assets/alight.jpeg';
 import MenuIcon from '@mui/icons-material/Menu';
 import TroubleshootIcon from '@mui/icons-material/Troubleshoot';
+import { useState } from "react";
+
 
 function NavBar(){
+const[isMobile,setIsMobile]= useState(false)
+// const [isInput, setIsInput] = useState(false)
+
+
     return(
         <>
         <nav>
@@ -12,7 +18,9 @@ function NavBar(){
                     <div className="logo">
                         <img src={alight} alt="al"/>
                     </div>
-                    <ul className="navlinks">
+                    <ul className={isMobile?'openNav':'navlinks'}
+                    onClick={()=>setIsMobile(false)}
+                    >
                         <li className="drop">
                         <a href="@" className="link">Our Work</a>
                         <ul className="dropdown">
@@ -47,10 +55,11 @@ function NavBar(){
                         <li><a href="@" className="link">Jobs</a></li>
                     </ul>
                     <div className="search">
-                        <input type="search" name="search" className="searchs" placeholder="search..." /><button><TroubleshootIcon className="srch"/></button>
+                        <input type="search" name="search" className="searchs" placeholder="search..."/><button><TroubleshootIcon className="srch"/></button>
                     </div>
-                    <TroubleshootIcon className="menu"/>
-                    <MenuIcon className="menu"/>
+                    <TroubleshootIcon className="menu" onClick = {()=>alert("search")}/>
+                    <MenuIcon className="menu" onClick = {()=>setIsMobile(!isMobile)} />
+        
                 </div>
             </div>
         </nav>

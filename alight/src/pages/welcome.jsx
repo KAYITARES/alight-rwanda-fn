@@ -7,6 +7,7 @@ import violence from '../assets/violence.jpeg';
 import health from '../assets/health.jpeg';
 import nutr from '../assets/nutr.jpeg'
 import education from '../assets/education.jpeg'
+import Who from "../components/whoWeAre";
 
 
 function Welcome(){
@@ -25,7 +26,7 @@ function Welcome(){
             <Program image = {health} name = "family planning" desc= "nutrition for nyabiheke camp"/>
             </div>
             </div>
-          
+          <Who/>
            
         </>
     )

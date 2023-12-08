@@ -54,6 +54,21 @@
                 top: 30%;
                 
             }
+            .openSearchs{
+                position: absolute;
+                display: flex;
+              
+                gap: 2rem;
+                list-style: none;
+                background-color: black;
+                left: 0;
+                top: 7.5rem;
+                transition: all .3s ease-out;
+              
+                width: 100%;
+                text-align: center;
+             padding: 2rem;
+            }
    
         @media(max-width:1170px) {
             .navlinks{
@@ -78,6 +93,46 @@
         }
         @media(max-width:950px) {
 
+           
+            .log{
+                display: flex;
+                position: absolute;
+                top: 15px;
+                left:35px;
+            }
+            .openNav{
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                list-style: none;
+                background-color: $light-bgcolor;
+                left: 0;
+                top: 7.5rem;
+                transition: all .3s ease-out;
+              
+                width: 100%;
+                text-align: center;
+             padding: 2rem;
+                
+            
+            }
+            .link{
+                color: #3A7AF8;
+                display: block;
+                text-align: center;
+                padding: 2rem;
+                width: 100%;
+                transition: all .5s ease;
+                font-size: 1.7rem;
+                text-decoration: none;
+                &:hover{
+                    background-color: red;
+                }
+               
+            }
+           
+
             .menu{
                 font-size: 3rem;
                 display: flex;
@@ -85,6 +140,7 @@
           .search{
             display: none;
           }
+        
          
         }
         @media (max-width:240px) {
@@ -119,17 +175,17 @@ top: 100%;
     .drops{
         display: block;
       color: red;
-        margin-top: 1rem;
+        // margin-top: 1rem;
         text-align: center;
     }
     .drop1{
         position: relative;
         .dropdown1{
             position: absolute;
-            left: 10.5rem;
+            // left: 10.5rem;
             list-style: none;
             padding: 2rem;
-            top: 0;
+            // top: 0;
             display: none;
             background-color: #eee;
             box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.212);

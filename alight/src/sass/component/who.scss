@@ -1,0 +1,95 @@
+.who-container{
+    text-align: center;
+    padding: 5rem;
+    .head{
+        padding: 2rem 1rem;
+            font-size: 4rem;
+            color: #11111180
+    }
+
+    .m-v{
+        @include flex(center,center,5rem);
+        padding: 2rem 2rem 1rem;
+
+         .mission,.vision{
+            font-size: 1.7rem;
+            color: #111111a6;
+            line-height: 3rem;
+         }
+         @media screen and (max-width:908px) {
+        
+            .mission,.vision{
+                font-size: 1.4rem;
+                color: #111111a6;
+                line-height: 2rem;
+             }
+        }
+        @media screen and (max-width:621px) {
+            .mission,.vision{
+                font-size: 1.3rem;
+                color: #111111a6;
+                line-height: 2rem;
+             }
+          
+        }
+    }
+    @media screen and (max-width:620px) {
+    .m-v{
+        flex-direction: column
+    }
+      
+    }
+    .form{
+        @include flex(center, center , 0);
+        form{
+            background-color: green;
+            @include flex(center, center , 0);
+            padding: 1rem;
+            width: 40%;
+            .textfield{
+               display:  grid;
+               grid-template-columns: repeat(2,1fr);
+               gap:1rem;
+               width: 40%
+               
+            }
+        }
+        textarea{
+            width: 100%;
+          padding: 2rem
+   
+            
+        }
+    }
+   }
+            
+
+
+
+.who{
+    @include flex(space-between,center,2rem);
+    flex-direction: column;
+   
+    h3{
+        font-size: 2rem;
+    }
+    p{
+        font-size: 1.7rem;
+        line-height: 3rem;
+       
+   
+    }
+    @media screen and (max-width:908px) {
+        p{
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+        .mission,.vision{
+            font-size: 1rem;
+            color: #111111a6;
+            line-height: 3rem;
+         }
+    }}
+
+
+

@@ -3,7 +3,7 @@
     .card{
  background:#eee;
  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.315);
-        width: 300px;
+        width: 100%;
        
         img{
             width: 100%;
@@ -35,10 +35,26 @@
         }
         .cards{
      display: grid;
-     grid-template-columns: repeat(3,1fr);
+     grid-template-columns: repeat(4,1fr);
      gap: 2rem;
                 padding: 2rem 5rem;
                 
                 
+            }
+
+            @media screen and (max-width:992px) {
+                .cards{
+                    grid-template-columns: repeat(3,1fr);
+                }
+            }
+            @media screen and (max-width:732px) {
+                .cards{
+                    grid-template-columns: repeat(2,1fr);
+                }   
+            }
+            @media screen and (max-width:515px) {
+                .cards{
+                    grid-template-columns: repeat(1,1fr);
+                }   
             }
     }
