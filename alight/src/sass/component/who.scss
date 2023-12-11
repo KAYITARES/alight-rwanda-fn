@@ -6,6 +6,13 @@
             font-size: 4rem;
             color: #11111180
     }
+    @media screen and (max-width:352px) {
+        .head{
+        
+            font-size: 2rem;
+        }
+       
+    }
 
     .m-v{
         @include flex(center,center,5rem);

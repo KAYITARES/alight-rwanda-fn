@@ -5,6 +5,13 @@
         font-size: 4rem;
         color: #11111180
     }
+    @media screen and (max-width:352px) {
+        .heads{
+          
+            font-size: 2rem;
+        }
+       
+    }
 }
 
 
@@ -25,8 +32,15 @@
         line-height: 3rem;
        
     }
-    .head{
+    .headd{
         margin-left: 15%;
+    }
+    @media screen and (max-width:352px) {
+        .headd{
+    
+            font-size: 2rem;
+        }
+       
     }
     .serv{
      

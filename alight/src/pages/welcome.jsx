@@ -8,6 +8,7 @@ import health from '../assets/health.jpeg';
 import nutr from '../assets/nutr.jpeg'
 import education from '../assets/education.jpeg'
 import Who from "../components/whoWeAre";
+import Footer from "../components/footer";
 
 
 function Welcome(){
@@ -27,7 +28,7 @@ function Welcome(){
             </div>
             </div>
           <Who/>
-           
+           <Footer/>
         </>
     )
 }

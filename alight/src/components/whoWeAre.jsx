@@ -1,16 +1,16 @@
 import React from "react";
+import ReadMore from "./readmore";
 
 function Who(){
+
+  const LongText = "With over two decades of continuous presence in Rwanda, Alight has been playing a critical role in helping displaced peoplerebuild   their lives. Today, Alight Rwanda works in all five refugee camps   their lives. Today, Alight Rwanda works in all five refugee camps"
 return (
     <>
         <div className="who-container">
         <h1 className="head">Who We Are</h1>
             <div className="who">
             <h3>We Are Alight</h3>
-            <p> With over two decades of continuous presence in Rwanda, Alight has
-              been playing a critical role in helping displaced peoplerebuild
-              their lives. Today, Alight Rwanda works in all five refugee camps
-              their lives. Today, Alight Rwanda works in all five refugee camps</p>
+              <ReadMore text={LongText} maxLength={100}></ReadMore>
       </div>
       <div className="m-v">
         <div className="mission">
