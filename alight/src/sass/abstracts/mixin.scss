@@ -5,9 +5,12 @@
     gap: $gap;
 }
 
-@mixin button ($bgcolor,$color){
+@mixin button ($bgcolor,$color,$size){
     padding: 1rem;
     background-color: $bgcolor;
     color: $color;
     border: none;
+    border-radius: .6rem;
+    font-size: $size;
+    cursor: pointer;
 }

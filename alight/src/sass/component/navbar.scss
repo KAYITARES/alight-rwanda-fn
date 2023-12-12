@@ -1,6 +1,11 @@
 .nav-container{
     background-color: $light-bgcolor;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.24);
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    top: 0;
+    
 
     .navbar{
         @include flex(space-between,center,0);
@@ -30,7 +35,12 @@
                 }
             }
 
-      
+            .btn{
+                background-color: #1976d2;
+                color: $light-bgcolor;
+                font-size: 1.3rem;
+                padding: 1rem 4rem;
+            }
         }
         .searchs{
             padding: .8rem;
@@ -38,16 +48,31 @@
             
         }
         input{
-            border: 1px solid rgb(173, 147, 147);
+            border: 1px solid black;
             position: relative;
-            padding: 2rem;
         }
      
             .srch{
                 font-size: 3rem;
                 position: absolute;
-                right: 4rem;
-               
+                right: 4.5rem;
+                top: 30%;
+                
+            }
+            .openSearchs{
+                position: absolute;
+                display: flex;
+              
+                gap: 2rem;
+                list-style: none;
+                background-color: black;
+                left: 0;
+                top: 7.5rem;
+                transition: all .3s ease-out;
+              
+                width: 100%;
+                text-align: center;
+             padding: 2rem;
             }
    
         @media(max-width:1170px) {
@@ -64,6 +89,13 @@
         @media(max-width:950px) {
             .navlinks{
                display: none;
+
+               .btn{
+                background-color: #1976d2;
+                color: $light-bgcolor;
+                font-size: 1.3rem;
+                padding: 1rem 4rem;
+            }
             }
         
             
@@ -73,6 +105,60 @@
         }
         @media(max-width:950px) {
 
+           
+            .log{
+                display: flex;
+                position: absolute;
+                top: 15px;
+                left:35px;
+            }
+            .openNav{
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                list-style: none;
+                background-color: $light-bgcolor;
+                left: 0;
+                top: 7.5rem;
+                transition: all .3s ease-out;
+              
+                width: 100%;
+                text-align: center;
+             padding: 2rem;
+                
+            
+            }
+            .link{
+                color: #3A7AF8;
+                display: block;
+                text-align: center;
+                padding: 2rem;
+                width: 100%;
+                transition: all .5s ease;
+                font-size: 1.7rem;
+                text-decoration: none;
+                &:hover{
+                    background-color: rgb(0, 195, 255);
+                }
+               
+            }
+            .btn{
+                color: #ffffff;
+                background-color: #3A7AF7;
+                display: block;
+                text-align: center;
+                padding: 2rem;
+                width: 100%;
+                transition: all .5s ease;
+                font-size: 1.7rem;
+                text-decoration: none;
+                &:hover{
+                    background-color: rgb(0, 195, 255);
+                }
+            }
+           
+
             .menu{
                 font-size: 3rem;
                 display: flex;
@@ -80,6 +166,7 @@
           .search{
             display: none;
           }
+        
          
         }
         @media (max-width:240px) {
@@ -114,17 +201,17 @@ top: 100%;
     .drops{
         display: block;
       color: red;
-        margin-top: 1rem;
+        // margin-top: 1rem;
         text-align: center;
     }
     .drop1{
         position: relative;
         .dropdown1{
             position: absolute;
-            left: 10.5rem;
+            // left: 10.5rem;
             list-style: none;
             padding: 2rem;
-            top: 0;
+            // top: 0;
             display: none;
             background-color: #eee;
             box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.212);
@@ -135,3 +222,35 @@ top: 100%;
     }
 
   }
+.input{
+    font-size: 1.2rem;
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+  
+    input{
+        padding: .8rem;
+        width: 100%;
+      
+     
+        
+        
+    }
+    label{
+        font-size: 1.2rem;
+        width: 30%;
+    }
+}
+.butt{
+ @include flex(center,center,1rem);
+ flex-direction: column;
+   
+p{
+    font-size: 1.4rem;
+}
+   
+}
+.head{
+    text-align: center;
+   
+}
