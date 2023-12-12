@@ -18,7 +18,7 @@ function Welcome(){
             <Home/>
             <About/>
             <div className="cardss">
-            <h1>Our program</h1>
+            <h1>OUR PROGRAMS</h1>
             <div className="cards"> 
             <Program image = {health} name = "Health Care" desc= "nutrition for nyabiheke camp"/>
             <Program image = {violence} name = "violence" desc= "nutrition for nyabiheke camp"/>

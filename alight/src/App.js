@@ -5,6 +5,7 @@ import './sass/main.scss';
 
 import SignUp from './components/sign-Up';
 import Tearm from './pages/ourterm';
+import Abouts from './pages/aboutus';
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
     <Router>
       <Routes>
         <Route path='/' element = {<Welcome/>}></Route>
-        <Route path='/tearm' element = {<Tearm/>}></Route>
+        <Route path='/team' element = {<Tearm/>}></Route>
         <Route path='/signUp' element = {<SignUp/>}></Route>
+        <Route path='/About' element = {<Abouts/>}></Route>
       </Routes>
     </Router>
   </>

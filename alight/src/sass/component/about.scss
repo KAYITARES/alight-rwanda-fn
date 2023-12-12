@@ -1,8 +1,10 @@
 .about-container{
+    background-color: #ddd;
     .heads{
         text-align: center;
-        padding: 2rem 1rem;
+        padding: 4rem 1rem;
         font-size: 4rem;
+       
         color: #11111180
     }
     @media screen and (max-width:352px) {
@@ -12,19 +14,89 @@
         }
        
     }
+    .about-text{
+        background-color: rgb(255, 255, 255);
+        display: grid;
+        grid-template-columns: 20% 80%;
+        gap: 6rem;
+        // @include flex(space-between,left,0rem);
+        .about{
+            background-color: darkcyan;
+           
+            padding-bottom: 2rem;
+            h1{
+                text-align: center; padding: 2rem;
+                background-color: rgba(94, 202, 202, 0.418);
+            }
+            .link{
+                text-decoration: none;
+                padding: .5rem;
+                color: #ddd;
+                margin-top: 2rem;
+            }
+         
+        }
+        .text{
+            width: 60%;
+            text-align: center;
+            padding: 4rem 1rem;
+
+            h2{
+                font-size: 1.8rem;
+                padding-bottom: 2rem;
+                
+            }
+        }
+        .serv{
+            @include flex(center,left,1rem);
+            flex-direction: column;
+            font-size: 1.8rem;
+
+        }
+    }
 }
 
 
 
 .abouts{
-  @include flex(center,top,3rem);
-    padding:3rem 5rem;
-    width: 100%;
+        flex-direction: column;
+        height: 100vh;
+        padding: 0;
 
-    h1{
-        font-size: 3rem;
-        padding-bottom: 2rem;
-        color: #11111180;
+        .about-image{
+          
+            width: 100%;
+            height: 50%;
+            background-color: black;
+            
+            img{
+                width: 100%;
+                position: relative;
+                height: 30%;
+                background-size: cover;
+               
+         
+                opacity: 0.7;
+                object-fit: cover;
+                
+            }
+        }
+        .about-text{
+            padding: 1rem 5rem;
+            // @include flex(space-between,left,0rem);
+        
+        }
+   
+    h3{
+        font-size: 2.5rem;
+        padding-bottom: 1rem;
+        color: #156cdf;
+        position: absolute;
+        font-weight: 900;
+        background-color: #dddddd4b;
+        backdrop-filter: blur(19px);
+        top: 50%;
+        left: 45%;
     }
     p{
         font-size: 1.8rem;
@@ -68,4 +140,7 @@
             padding: 1rem 5rem;
         }
     }
+}
+.btn{
+    @include flex(center,center,0rem);
 }
