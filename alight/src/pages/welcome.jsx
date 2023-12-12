@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "../components/navbar";
 import Home from "../components/home";
-import About from "../components/about";
+
 import Program from "../components/program";
 import violence from '../assets/violence.jpeg';
 import health from '../assets/health.jpeg';
@@ -16,7 +16,6 @@ function Welcome(){
         <>
             <NavBar/>
             <Home/>
-            <About/>
             <div className="cardss">
             <h1>OUR PROGRAMS</h1>
             <div className="cards"> 
