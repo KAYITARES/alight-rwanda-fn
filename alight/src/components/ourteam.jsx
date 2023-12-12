@@ -1,10 +1,20 @@
 import React from "react";
 
 
-export default function Ourteam(){
+export default function Ourteam(props){
 return (
     <>
-        <h1>hello term</h1>
+       <div className="our-container">
+        <div className="term">
+        <div className="trm-image">
+        <img src={props.image} alt="term"/>
+        </div>
+         <h3>{props.position}</h3>
+         <p>{props.name}</p>
+        </div>
+       </div>
+
+       
     </>
 )
 }

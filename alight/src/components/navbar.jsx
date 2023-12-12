@@ -99,6 +99,7 @@ const handleClose = () => setOpen(false);
             
             <div className="butt">
             <Buttons name= "Login"/>
+            <a href="@">forgot password</a>
             <p>if you don't have an account?<a href="/" className="link">sign up</a></p>
             </div>
             
