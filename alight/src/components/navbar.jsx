@@ -67,7 +67,7 @@ const handleClose = () => setOpen(false);
                         <li><a href="./about" className="link drops">ABout Us</a></li>
                         <li><a href="/" className="link drops">Join Us</a></li>
                         <li><a href="/" className="link drops">Testimonial</a></li>
-                        <li><a href="./ourteam" className="link drops">Our Term</a></li>
+                        <li><a href="./team" className="link drops">Our Term</a></li>
                         </ul>
                         </li>
                         <li><a href="/" className="link">Donate</a></li>

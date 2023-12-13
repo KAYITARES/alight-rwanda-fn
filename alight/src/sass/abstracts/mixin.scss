@@ -5,6 +5,12 @@
     gap: $gap;
 }
 
+@mixin grid{
+ display: grid;
+ grid-template-columns: repeat(3,1fr);
+ gap: 3rem;
+}
+
 @mixin button ($bgcolor,$color,$size){
     padding: 1rem;
     background-color: $bgcolor;
