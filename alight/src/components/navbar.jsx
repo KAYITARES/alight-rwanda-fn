@@ -41,25 +41,8 @@ const handleClose = () => setOpen(false);
                     <ul className={isMobile?'openNav':'navlinks'}
                     onClick={()=>setIsMobile(false)}
                     >
-                        <li className="drop">
-                        <a href="/" className="link">Our Work</a>
-                        <ul className="dropdown">
-                        <li className="drop1">
-                        <a href="/" className="link drops">Sector</a>
-                        <ul className="dropdown1">
-                        <li><a href="/" className="link drops">Education</a></li>
-                        <li><a href="/" className="link drops">Health</a></li>
-                        <li><a href="/" className="link drops">Protection</a></li>
-                        <li><a href="/" className="link drops">Nutrion</a></li>
-                        <li><a href="/" className="link drops">family Planning</a></li>
-                        </ul>
-                        </li>
-                        <li><a href="/" className="link drops">NyabihekeCamp</a></li>
-                        <li><a href="/" className="link drops">MahamaCamp</a></li>
-                        <li><a href="/" className="link drops">KigemeCamp</a></li>
-                        </ul>
-                        </li>
-                        <li><a href="/" className="link">Platform</a></li>
+                    
+                        <li><a href="/" className="link">Home</a></li>
                         <li className="drop">
                         
                         <a href="/" className="link">We are Alight</a>
