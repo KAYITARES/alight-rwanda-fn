@@ -18,12 +18,11 @@ district for more info read more ’’</p>
     </div>
    
     <div className="blogs">
-        <Blogs title = 'nyabiheke coding' desc = 'hafuguwe ishuli rishya nyabiheke'/>
-        <Blogs title = 'nyabiheke coding' desc = 'hafuguwe ishuli rishya nyabiheke'/>
-        <Blogs title = 'nyabiheke coding' desc = 'hafuguwe ishuli rishya nyabiheke'/>
-        <Blogs title = 'nyabiheke coding' desc = 'hafuguwe ishuli rishya nyabiheke'/>
-        <Blogs title = 'nyabiheke coding' desc = 'hafuguwe ishuli rishya nyabiheke'/>
-        <Blogs title = 'nyabiheke coding' desc = 'hafuguwe ishuli rishya nyabiheke'/>
+    <div className="tend">
+ <Blogs/>
+    </div>
+       
+      
     </div>
     </div>
     

@@ -2,20 +2,10 @@
     background-color: rgb(255, 255, 255);
     width: 400px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.26);
-    // padding: 1rem;
+    padding: 2rem;
     border-radius: 2rem;
-@include flex(center,center,4rem);
-    .test-image{
-        width: 200px;
-        height: 200px;
 
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-           
-        }
-    }
+    
     p{
         font-size: 1.7rem;
         color: rgba(0, 0, 0, 0.726);
@@ -44,27 +34,90 @@
         }
     }
 }
-.testas{
+.test-container{
 
-    @include flex(center,center,2rem);
-    flex-wrap: wrap;
-    padding: 1rem;
-
-}
-.texas{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     padding: 3rem;
-    .tes{
-        text-align: center;
+    gap: 3rem;
+    .test{
+        width: 100%;
+        display: flex;
+        gap: 3rem;
+        .test-image{
+            width: 150px;
+            height: 150px;
+            padding: 2rem;
+    
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+               
+            }
+        }
+        .test-text{
+          
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+           
+        }
+    }
+    @media screen and (max-width:1200px) {
+        .test{
+       
+            display: flex;
+            flex-direction: column;
+        }
+        .test-image{
+         width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+  
+}
+@media screen and (max-width:464px) {
+    .test-container{
+   
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        padding: 3rem;
+        gap: 3rem;
+       
+       
+    }
+    
+   
+}
+.tes{
+    padding: 2.8rem 1rem 0;
+    text-align: center;
+    h1{
+        font-size: 4rem;
         padding-bottom: 1rem;
-        p{
-            font-size: 1.6rem;
-            padding: 1.2rem 0;
-            letter-spacing: .1rem;
-        }
-        h1{
-            font-size: 3rem;
-            font-weight: 900;
-            color: rgba(3, 3, 3, 0.514);
-        }
+        color: rgb(63, 62, 62);
+    }
+    p{
+        font-size: 1.8rem;
+        letter-spacing: .1rem;
+    }
+}
+.tes{
+    padding: 2.8rem 1rem 0;
+    text-align: center;
+    h1{
+        font-size: 3rem;
+        padding-bottom: 1rem;
+        color: rgb(63, 62, 62);
+    }
+    p{
+        font-size: 1.6rem;
+        letter-spacing: .1rem;
+        line-height: 2.4rem;
     }
 }

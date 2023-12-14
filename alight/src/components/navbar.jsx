@@ -5,33 +5,42 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from "react";
 import Button from '@mui/material/Button';
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
-import { Box,Typography,Modal } from "@mui/material";
-import Buttons from "./button";
+import Login from "./login";
+import {Modal} from 'antd'
 
 
-const style ={
-    position: 'absolute',
-    top:'50%',
-    left:'50%',
-    transform: 'translate(-50%, -50%)',
-    width: 400,
-    bgcolor: 'background.paper',
-    border: 'none',
-    boxShadow: 24,
-    p: 4,
 
-}
+
+
+
 
 
 function NavBar(){
 const[isMobile,setIsMobile]= useState(false);
 // const [isInput, setIsInput] = useState(false)
-const [open,setOpen] = useState(false);
-const handleOpen = () => setOpen(true);
-const handleClose = () => setOpen(false);
+const [IsOpen, setIsOpen] = useState(false);
 
+const handleOpen = ()=>{
+    setIsOpen(true)
+}
+const handleClose = () =>{
+    setIsOpen(false)
+}
     return(
+        
         <>
+  <Modal open={IsOpen} onCancel={handleClose} footer = {null}>
+  {
+    setIsOpen && (
+                <Login/>
+            )
+  }
+
+  </Modal>
+            
+           
+        
+       
         <nav>
             <div className="nav-container">
                 <div className="navbar">
@@ -57,39 +66,8 @@ const handleClose = () => setOpen(false);
                         <li><a href="/" className="link">Blogs</a></li>
                         <li><a href="/" className="link">Jobs</a></li>
                         
-                       <Button onClick = {handleOpen} className="btn" endIcon={<VpnKeyIcon/>}>Sign-In</Button>
-                        <Modal
-                        open = {open} 
-                        onClose={handleClose}
-                        aria-labelledby = 'modal-modal-title'
-                        aria-describedby = 'modal-modal-description'
-                       >
-                        <Box sx={style}>
-                        <Typography id="modal-modal-title" variant="h6" component="h2">
-                 <h1 className="head">Sign-Up</h1> 
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            <form action="#" method="post">
-            <div className="input">
-            <label>Email:</label>
-                <input type="text" name="fname" />
-            </div>
-            <div className="input">
-            <label>PassWord:</label>
-                <input type="password" name="fname" />
-            </div>
-           
-            
-            <div className="butt">
-            <Buttons name= "Login"/>
-            <a href="@">forgot password</a>
-            <p>if you don't have an account?<a href="/" className="link">sign up</a></p>
-            </div>
-            
-            </form>
-          </Typography>
-          </Box>
-                      </Modal>  
+                       <Button onClick={handleOpen} className="btn" endIcon={<VpnKeyIcon/>}>Sign-In</Button>
+     
                     </ul>
             
                     {/* <TroubleshootIcon className="menu" onClick = {()=>alert("search")}/> */}

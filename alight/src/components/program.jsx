@@ -15,7 +15,7 @@ return(
              <div className="tex">
              <h3>{props.name}</h3>
             <p>{props.desc}</p>
-            <a href="@" onClick={()=>alert("werr")}><Buttons name = "read more"/></a>
+            <a href="@" onClick={()=>alert("werr")}><Buttons name = "read more" fontsize = '1.6rem'/></a>
              </div>  
         
         </div>

@@ -16,10 +16,8 @@ export default function Testimonials(){
         </div>
        <div className="testas">
        <Testmonial/>
-            <Testmonial/>
-            <Testmonial/>
-            <Testmonial/>
-            <Testmonial/>
+          
+            
        </div>
            
         </div>
