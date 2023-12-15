@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PermPhoneMsgIcon from "@mui/icons-material/PermPhoneMsg";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
@@ -7,36 +7,45 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import alight from '../assets/alight.jpeg';
-import { Box,Typography,Modal } from "@mui/material";
 import {Link} from 'react-router-dom'
 import ReadMore from "./readmore";
+import Contact from "./contact";
+import { Modal } from "antd";
 
-import { useState } from "react";
-import SendIcon from '@mui/icons-material/Send';
 
-const style ={
-    position: 'absolute',
-    top:'50%',
-    left:'50%',
-    transform: 'translate(-50%, -50%)',
-    width: 400,
-    bgcolor: 'background.paper',
-    border: 'none',
-    boxShadow: 24,
-    p: 4,
 
-}
+
+
 
 
 export default function Footer() {
-    const [open,setOpen] = useState(false);
-const handleOpen = () => setOpen(true);
-const handleClose = () => setOpen(false);
+const [isOpens,setIsOpens] = useState(false)
 
 
+const handleOpens = () =>{
+  setIsOpens(true)
+}
+const handleClose = () =>{
+  setIsOpens(false)
+}
 const LongText = "Alight’s annual report outlines the organization’s activities throughout the preceding year. It is intended to give refugees, donors, partners, stakeholders, Alight’s annual report outlines the organization’s activities throughout the preceding year. It is intended to give refugees, donors, partners, stakeholders,"
   return (
     <>
+
+    
+      <Modal open ={isOpens} onCancel={handleClose} footer={null}>
+      {
+        setIsOpens &&
+        (
+          <Contact/>
+        )
+      }
+      
+      </Modal>
+    
+     
+    
+    
       <footer>
         <div className="footer-container">
         <div className="footer">
@@ -83,47 +92,10 @@ const LongText = "Alight’s annual report outlines the organization’s activit
             <TwitterIcon className="icon"/>
           </div>
           <div className="contact">
-          <Button variant="contained" endIcon={<EmailIcon />} onClick={handleOpen}>
+          <Button variant="contained" endIcon={<EmailIcon />} onClick={handleOpens}>
         Contact-Us
       </Button>
-      <Modal
-                        open = {open} 
-                        onClose={handleClose}
-                        aria-labelledby = 'modal-modal-title'
-                        aria-describedby = 'modal-modal-description'
-                       >
-                        <Box sx={style}>
-                        <Typography id="modal-modal-title" variant="h6" component="h2">
-                 <h1 className="head">Contact-Us</h1> 
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            <form action="#" method="post">
-            <div className="input">
-            <label>Email:</label>
-                <input type="text" name="fname" />
-            </div>
-            <div className="input">
-            <label>Names:</label>
-                <input type="password" name="fname" />
-            </div>
-            <div className="input">
-            <label>Messages:</label>
-             <textarea type="message" className="area"></textarea>
-            </div>
-           
-            
-            <div className="butt">
-            <Button variant="contained" endIcon={<SendIcon />} style={{width:'100%', fontSize:'1.5rem'}}>send</Button>
-            </div>
-            <div className="iconss">
-            <FacebookIcon className="icon"/>
-            <InstagramIcon className="icon"/>
-            <TwitterIcon className="icon"/>
-          </div>
-            </form>
-          </Typography>
-          </Box>
-                      </Modal>  
+      
           </div>
           <p className="copy">&copy;{new Date().getFullYear()}@alightrwanda All right deserved</p>
           <div className="footer-image">

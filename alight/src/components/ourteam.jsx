@@ -5,6 +5,7 @@ export default function Ourteam(props){
 return (
     <>
        <div className="our-container">
+       
         <div className="term">
         <div className="trm-image">
         <img src={props.image} alt="term"/>
