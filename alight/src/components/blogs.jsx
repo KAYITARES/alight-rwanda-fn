@@ -40,25 +40,6 @@ export default function Blogs(){
                         </div>
               </div>
                     <div className="decription">
-                        {/* <h3>{blogx.newsMainTitle}</h3>
-                        <p className='short'>{blogx.newsSummaryDescription}</p> */}
-                        {/* <div className='icons'>
-                            <div className='likes'>
-                                <ThumbUpIcon style={{ fontSize: "24px" }} />
-                                <p>{blogx.likes.length}</p>
-                            </div>
-                            <div className='dislikes'>
-                                <ThumbDownOffAltIcon style={{ fontSize: "24px" }} />
-                                <p>{blogx.dislikes.length}</p>
-                            </div>
-                            <div className='comment'>
-                                <MapsUgcIcon style={{ fontSize: "24px" }} />
-                                <p>{blogx.comment.length}</p>
-                            </div>
-                        </div> */}
-                        {/* <div className='blog-btn'>
-                            <Button> readmore</Button>
-                        </div> */}
 
                     </div>
                     </div>

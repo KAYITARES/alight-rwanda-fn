@@ -8,6 +8,7 @@ import Tearm from './pages/ourterm';
 import Abouts from './pages/aboutus';
 import Blog from './pages/blogsp';
 import Testimonials from './pages/testimonials';
+import Jobs from './pages/jobs';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/About' element = {<Abouts/>}></Route>
         <Route path='/Blog' element = {<Blog/>}></Route>
         <Route path='/testimonial' element = {<Testimonials/>}></Route>
+        <Route path='/job' element = {<Jobs/>}></Route>
       </Routes>
     </Router>
   </>
