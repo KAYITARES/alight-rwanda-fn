@@ -9,7 +9,7 @@ export default function Job(){
              {jobs.map((jobx)=>(
                
                 <div className="test">
-            <div className="test-image">
+            <div className="job-image">
                 <img src={jobx.newsImage} alt="test"/>
             </div>
             <div className="test-text">
