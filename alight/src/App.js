@@ -11,6 +11,7 @@ import Testimonials from './pages/testimonials';
 import Jobs from './pages/jobs';
 
 import GetOneJobs from './pages/getOneJobs';
+import ReadmorePage from './pages/getReadmorep';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path='/testimonial' element = {<Testimonials/>}></Route>
         <Route path='/job' element = {<Jobs/>}></Route>
         <Route path='/getjob' element = {<GetOneJobs/>}></Route>
+        <Route path='/getreadmore' element = {<ReadmorePage/>}></Route>
       </Routes>
     </Router>
   </>

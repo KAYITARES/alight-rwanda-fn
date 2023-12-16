@@ -65,17 +65,17 @@ const LongText = "Alight’s annual report outlines the organization’s activit
                 <h3>Resources</h3>
             <ul>
            
-            <Link><li>Blogs</li> </Link>
-                <Link><li>campany</li></Link>
-                <Link><li>Testimonial</li></Link>
+                <Link className="link"><li>Blogs</li> </Link>
+                <Link className="link"><li>campany</li></Link>
+                <Link className="link"><li>Testimonial</li></Link>
             </ul>
                 </div>
                 <div className="resource">
                 <h3>Campany</h3>
             <ul>
-               <Link> <li>Our-Services</li></Link>
-               <Link><li>Contact-Us</li></Link>
-               <Link><li>Our-Team</li></Link>
+               <Link className="link"> <li>Our-Services</li></Link>
+               <Link className="link"><li>Contact-Us</li></Link>
+               <Link className="link"><li>Our-Team</li></Link>
             </ul>
                 </div>
           </div>

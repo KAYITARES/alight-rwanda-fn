@@ -1,10 +1,32 @@
 import { Button } from "@mui/material";
 import React from "react";
+import FormJob from "./jobform";
+import { useState } from "react";
+import { Modal } from "antd";
 
 
 export default function GetOneJob(){
+
+   const[IsJob,setIsJob] = useState(false);
+
+   const HandleJob = () =>{
+      setIsJob(true)
+   }
+   const handleClose = () =>{
+      setIsJob(false)
+   }
     return (
         <>
+       
+         <Modal open = {IsJob} onCancel={handleClose} footer = {null}>
+         {
+         IsJob &&
+         <FormJob/>
+         }
+         </Modal>
+       
+       
+        
             <div className="get-one-container">
                 <div className="get-one">
                 <h1>JOB ADVERT- ACOUNTANT POSITION</h1>
@@ -61,7 +83,7 @@ export default function GetOneJob(){
                        <li>This advert has been viewed 474 times</li>
                        </ul>
                        <div className="job-btn">
-                       <Button className="btn">UPPLY-JOB</Button>
+                       <Button className="btn" onClick={HandleJob}>UPPLY-JOB</Button>
                        </div>
                       
                     </div>
