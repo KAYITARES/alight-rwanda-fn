@@ -4,7 +4,7 @@
     .all-h2{
         @include flex(center,center,0);
         font-size:2rem;
-        padding: 2rem
+        padding-top: 4rem
     }
     .all-p{
         @include flex(center,center,0);
@@ -127,6 +127,11 @@
 .our-container{
 padding: 3rem;
 }
+@media screen and (max-width:303) {
+    .our-container{
+        padding: 0;
+    }
+}
 
 
 .trm-image{
@@ -164,6 +169,9 @@ padding: 5rem;
 //    @include grid;
 display: grid;
 grid-template-columns: repeat(2,1fr);
+justify-content: center;
+align-items: center;
+width: 100%;
   }
   .yee{
     background-color: rgb(255, 255, 255);

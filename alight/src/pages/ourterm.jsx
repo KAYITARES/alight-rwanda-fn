@@ -27,8 +27,7 @@ function Tearm() {
           </div>
           <div className="assist">
             <h2>BOARD OF DIRECTORS</h2>
-            <div className="yee">
-              <Ourteam image={tmwk} position={"ceo"} name={"japhet"} />
+            <div className="test">
               <Ourteam image={tmwk} position={"ceo"} name={"japhet"} />
               <Ourteam image={tmwk} position={"ceo"} name={"japhet"} />
               <Ourteam image={tmwk} position={"ceo"} name={"japhet"} />
@@ -38,7 +37,8 @@ function Tearm() {
           </div>
           <div className="assist">
             <h2>ENTERPRISE EXECUTIVE DIRECTORS</h2>
-            <div className="yee">
+            <div className="test">
+              <Ourteam image={tmwk} position={"ceo"} name={"japhet"} />
               <Ourteam image={tmwk} position={"ceo"} name={"japhet"} />
               <Ourteam image={tmwk} position={"ceo"} name={"japhet"} />
               <Ourteam image={tmwk} position={"ceo"} name={"japhet"} />
