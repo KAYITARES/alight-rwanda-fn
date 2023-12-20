@@ -1,14 +1,18 @@
-import React from "react";
+// import React, { useState } from "react";
 import {BsCart3} from 'react-icons/bs';
 import GridViewIcon from '@mui/icons-material/GridView';
 import BookIcon from '@mui/icons-material/Book';
 import PersonIcon from '@mui/icons-material/Person';
-import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
-import TextFieldsIcon from '@mui/icons-material/TextFields';
+import BloodtypeIcon from '@mui/icons-material/Bloodtype';
 import SettingsIcon from '@mui/icons-material/Settings';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import TerminalIcon from '@mui/icons-material/Terminal';
+import WorkIcon from '@mui/icons-material/Work';
 import { Button } from "@mui/material";
+
 export default function Sidebar({OPensidebar}){
+ 
+
+
     return(
         <>
         <aside id="sidebar" className={OPensidebar ? 'sidebar-responsive' :""}>
@@ -30,41 +34,31 @@ export default function Sidebar({OPensidebar}){
                 </a>
             </li>
             <li className="side-list-items">
-                <a href="@" className="item">
-                    <BookIcon className="icon"/>BLOGS<ArrowDropDownIcon className="icon"/>
-                </a>
-                <ul className="dropdowns">
-                <li><a href="@" className="items">Post-blogs</a></li>
-                <li><a href="@" className="items">GetAll-blogs</a></li>
-                <li><a href="@" className="items">Comment</a></li>
-                </ul>
+            <a href='@' className='item'>
+                    <BookIcon className="icon"/>BLOGS
+                    </a>
             </li>
             <li className="side-list-items">
                 <a href="@" className="item">
-                    <TextFieldsIcon className="icon"/>FORMS<ArrowDropDownIcon className="icon"/>
+                    <TerminalIcon className="icon"/>PROGRAMS
                     
                 </a>
-                <ul className="dropdowns">
-                <li><a href="@" className="items">blog-form</a></li>
-                <li><a href="@" className="items">Job-form</a></li>
-                <li><a href="@" className="items">program form</a></li>
-                </ul>
                 
             </li>
             <li className="side-list-items">
                 <a href="@" className="item">
-                    <MonetizationOnIcon className="icon"/>BUDGET
+                    <BloodtypeIcon className="icon"/>DONATE
                 </a>
             </li>
             <li className="side-list-items">
                 <a href="@" className="item">
-                    <BsCart3 className="icon"/>WARE-HOUSE<ArrowDropDownIcon className="icon"/>
+                    <BsCart3 className="icon"/>WARE-HOUSE
                 </a>
-                <ul className="dropdowns">
-                <li><a href="@" className="items">Import products</a></li>
-                <li><a href="@" className="items">Export products</a></li>
-                <li><a href="@" className="items">Income</a></li>
-                </ul>
+            </li>
+            <li className="side-list-items">
+                <a href="@" className="item">
+                    <WorkIcon className="icon"/>JOB
+                </a>
             </li>
             <li className="side-list-items">
                 <a href="@" className="item">

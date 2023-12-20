@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Image } from "antd";
 import ReadMore from "./readmore";
 import testi from '../assets/testi/testi.json'
 
@@ -12,7 +12,8 @@ export default function Testmonial(){
                
                 <div className="test">
             <div className="test-image">
-                <img src={testx.newsImage} alt="test"/>
+            <Image width={'100%'} height={'100%'} src={testx.newsImage}/>
+             
             </div>
             <div className="test-text">
             

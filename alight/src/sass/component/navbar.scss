@@ -193,7 +193,7 @@
     position: absolute;
     list-style: none;
     background-color: $light-bgcolor;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.212);
+    box-shadow: 2px 2px 3px rgba(168, 134, 134, 0.212);
     padding: 2rem;
 top: 100%;
 
@@ -201,25 +201,10 @@ top: 100%;
     .drops{
         display: block;
       color: red;
-        // margin-top: 1rem;
+        margin-top: 2rem;
         text-align: center;
     }
-    .drop1{
-        position: relative;
-        .dropdown1{
-            position: absolute;
-            // left: 10.5rem;
-            list-style: none;
-            padding: 2rem;
-            // top: 0;
-            display: none;
-            background-color: #eee;
-            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.212);
-        }
-        &:hover .dropdown1{
-            display: block;
-        }
-    }
+ 
 
   }
 .input{

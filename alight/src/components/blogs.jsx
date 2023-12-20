@@ -1,5 +1,5 @@
 import React from "react";
-// import dodo from '../assets/education.jpeg'
+import { Image } from "antd";
 import { Button } from "@mui/material";
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
@@ -15,7 +15,8 @@ export default function Blogs(){
             {Blog.reverse().map((blogx) => (
               <div className="blog">
               <div className="blog-image">
-              <img src={blogx.newsImage}/>
+              <Image width = {'100%'} height={'100%'} src= {blogx.newsImage}/>
+             
               </div>
               <div className="blog-content">
               <h3 className="title">{blogx.newsMainTitle}</h3>

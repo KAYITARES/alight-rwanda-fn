@@ -11,11 +11,13 @@ import Who from "../components/whoWeAre";
 import Footer from "../components/footer";
 
 
+
 function Welcome(){
     return(
         <>
             <NavBar/>
             <Home/>
+            
             <div className="cardss">
             <h1>OUR PROGRAMS</h1>
             <div className="cards"> 

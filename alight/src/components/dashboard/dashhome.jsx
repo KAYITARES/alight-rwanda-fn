@@ -4,6 +4,9 @@ import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LocalAtmIcon from '@mui/icons-material/LocalAtm';
 import EditNotificationsIcon from '@mui/icons-material/EditNotifications';
+import Post from "../postBlogs/post";
+import Pjob from "../postjob/postjob";
+import Program from "../postPrograms/programsPost";
 
 export default function DashHome(){
     const datas = [
@@ -130,7 +133,11 @@ export default function DashHome(){
 
     return(
         <>
+      
             <main className="main-container">
+            <Post/>
+            <Pjob/>
+            <Program/>
             <div className="main-title">
                 <h3>DASHBOARD</h3>
             </div>
@@ -169,12 +176,14 @@ export default function DashHome(){
             </div>
            
             </div>
+            
             <div className="stati">
             <h2>statistic of this week</h2>
             <h2>statistic of this year</h2>
             </div>
             
             <div className="charts" style={{ width: '100%', height: 300 }}>
+            <div className="chart-left">
             <ResponsiveContainer width="100%" height="100%">
         <BarChart
           width={500}
@@ -196,8 +205,10 @@ export default function DashHome(){
           <Bar dataKey="uv" stackId="a" fill="#82ca9d" />
         </BarChart>
       </ResponsiveContainer>
-
-        <ResponsiveContainer width="100%" height="100%">
+            </div>
+       
+          <div className="chart-right">
+          <ResponsiveContainer width="100%" height="100%">
         <AreaChart
           width={500}
           height={400}
@@ -216,7 +227,11 @@ export default function DashHome(){
           <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
         </AreaChart>
       </ResponsiveContainer>
+          </div>
+       
             </div>
+           
+          
 
             <div className="table-container">
             <h1>Items of WareHouse</h1>

@@ -255,12 +255,17 @@ padding: 3rem;
     grid-template-columns: 1fr;
     grid-template-rows: 0.2fr 3fr;
     grid-template-areas: 'header','main';
-  
    
+  
+   .main-card{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
    }
+   }
+   
    .header{
     width: 100%;
-    background-color: red;
+   
 }
    #sidebar{
     display: none;
@@ -277,10 +282,44 @@ padding: 3rem;
 
    }
 }
-
+@media screen and (max-width:886px) {
+    .main-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 3fr;
+        grid-template-areas: 'header','main';
+       
+      
+       .main-card{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+       }
+       }
+ 
+}
+@media screen and (max-width:700px) {
+    .main-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 3fr;
+        grid-template-areas: 'header','main';
+       
+      
+       .main-card{
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+       }
+       }
+  
+}
 // end main
 
 //tables
+.open{
+    display: block;
+}
+
+.job-container,.program-container,.post-container{
+    display: none;
+}
 .table-container{
     padding: 0 3rem 3rem;
     h1{
@@ -312,6 +351,69 @@ padding: 3rem;
             font-size: 1.7rem;
             padding: 1.4rem 1rem;
         }
+        .opt{
+            background-color: red;
+            text-align: center;
+            .del{
+                width: 100%;
+                background-color: red;
+                border: none;
+                color: #fff;
+            }
+        }
+        .opts{
+            background-color: rgb(0, 140, 255);
+            text-align: center;
+            .del{
+                width: 100%;
+                background-color: rgb(0, 140, 255);
+                border: none;
+                color: #fff;
+            }
+        }
     }
 }
 //end table
+
+
+// blogs
+.forms{
+    background-color: rgb(168, 168, 168);
+    width: 50%;
+    border-radius: 2rem;
+    .input{
+        width: 100%;
+    }
+    .post-btn{
+     
+        @include flex(center,center,0);
+        .btn{
+            width: 70%;
+            background-color: #3e6af0;
+            color: #ffff;
+            border: none;
+            
+        }
+    }
+}
+.post-form{
+    background-color: rgb(255, 255, 255);
+    @include flex(center,center,0);
+    flex-direction: column;
+    padding: 3rem;
+   
+h2{
+    font-size: 3rem;
+    text-align: center;
+}
+  label{
+    font-size: 1.6rem;
+    padding-top: 1.5rem;
+    font-weight: 700;
+  }
+  .form{
+    padding: 2rem;
+   
+  }
+}
+//end blogs

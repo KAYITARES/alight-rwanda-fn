@@ -1,6 +1,7 @@
 import React from "react";
 import jobs from '../assets/jobs/job.json'
 import { Button } from "@mui/material";
+import { Image } from 'antd';
 
 export default function Job(){
     return (
@@ -10,7 +11,11 @@ export default function Job(){
                
                 <div className="test">
             <div className="job-image">
-                <img src={jobx.newsImage} alt="test"/>
+            <Image
+    width={'100%'} height={'100%'}
+    src={jobx.newsImage}
+  />
+                
             </div>
             <div className="test-text">
         <div className="tit">
