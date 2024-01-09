@@ -3,7 +3,9 @@ import Buttons from "./button";
 
 
 
+
 function Program(props){
+
 return(
     <>
      <div className="card-cont">
@@ -19,8 +21,10 @@ return(
              </div>  
         
         </div>
+
      </div>
     </>
 )
 }
 export default Program
+

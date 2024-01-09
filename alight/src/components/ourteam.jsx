@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Image } from "antd";
 
 export default function Ourteam(props){
 return (
@@ -8,7 +8,7 @@ return (
        
         <div className="term">
         <div className="trm-image">
-        <img src={props.image} alt="term"/>
+        <Image width={'100px'} height= {'100px'} src={props.image} alt="term" className="img"/>
         </div>
          <h3>{props.position}</h3>
          <p>{props.name}</p>

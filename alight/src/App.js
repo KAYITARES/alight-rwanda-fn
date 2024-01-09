@@ -10,6 +10,11 @@ import Blog from './pages/blogsp';
 import Testimonials from './pages/testimonials';
 import Jobs from './pages/jobs';
 
+import GetOneJobs from './pages/getOneJobs';
+import ReadmorePage from './pages/getReadmorep';
+import Dashboards from './pages/dashboards';
+
+
 function App() {
   return (
   <>
@@ -22,8 +27,12 @@ function App() {
         <Route path='/Blog' element = {<Blog/>}></Route>
         <Route path='/testimonial' element = {<Testimonials/>}></Route>
         <Route path='/job' element = {<Jobs/>}></Route>
+        <Route path='/getjob' element = {<GetOneJobs/>}></Route>
+        <Route path='/getreadmore' element = {<ReadmorePage/>}></Route>
+        <Route path='/dashboard' element = {<Dashboards/>}></Route>
       </Routes>
     </Router>
+  
   </>
   
   );

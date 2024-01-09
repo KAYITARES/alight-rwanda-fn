@@ -72,5 +72,17 @@
     }
     
 }
+@media screen and (max-width:1194px) {
+    .sign{
+        display: flex;
+        flex-direction: column;
+        margin-top: 200px;
+    }
+}
+@media screen and (max-width:587px) {
+    .sign{
+       width: 100%;
+    }
+}
     
 }
