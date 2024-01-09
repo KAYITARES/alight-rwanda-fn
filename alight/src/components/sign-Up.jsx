@@ -8,7 +8,7 @@ export default function SignUp(props){
             <div className="sign">
             
             <div className="left">
-            <h3>OR</h3>
+           
             <form action="#" method="post">
             <h1>signUp</h1>
                     <div className="fild">

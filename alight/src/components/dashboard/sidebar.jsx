@@ -8,6 +8,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import TerminalIcon from '@mui/icons-material/Terminal';
 import WorkIcon from '@mui/icons-material/Work';
 import { Button } from "@mui/material";
+import Post from '../postBlogs/post';
 
 export default function Sidebar({OPensidebar}){
  
@@ -23,9 +24,11 @@ export default function Sidebar({OPensidebar}){
         <span className="icon icon_close">X</span>
         </div>
         <ul className="sidebar-list">
-            <li className="side-list-items">
-                <a href="@" className="item">
-                    <GridViewIcon className="icon"/>DASHBOARD
+            <li className="side-list-items" onClick={({key})=>{
+
+            }}>
+                <a href="./postjob" className="item" key={<Post/>}>
+                    <GridViewIcon className="icon" />DASHBOARD
                 </a>
             </li>
             <li className="side-list-items">

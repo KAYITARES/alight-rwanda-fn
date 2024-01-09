@@ -14,6 +14,7 @@ import GetOneJobs from './pages/getOneJobs';
 import ReadmorePage from './pages/getReadmorep';
 import Dashboards from './pages/dashboards';
 
+
 function App() {
   return (
   <>
@@ -31,6 +32,7 @@ function App() {
         <Route path='/dashboard' element = {<Dashboards/>}></Route>
       </Routes>
     </Router>
+  
   </>
   
   );
