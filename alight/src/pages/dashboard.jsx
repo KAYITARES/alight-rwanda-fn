@@ -1,11 +1,11 @@
 import React from "react";
-import Dashboard from "../components/dashboard/dashboard";
+import Dash from "../components/dashboard/dash";
 
 
 export default function Dashboards(){
-    return (
+    return(
         <>
-            <Dashboard/>
+            <Dash/>
         </>
     )
 }
