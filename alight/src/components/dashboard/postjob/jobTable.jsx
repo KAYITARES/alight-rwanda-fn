@@ -8,22 +8,24 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import BrowserUpdatedIcon from '@mui/icons-material/BrowserUpdated';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { Button } from "antd";
-import { useState } from "react";
+import { Button } from 'antd';
 import {Modal} from 'antd'
-import AddItems from './additem';
+import { useState } from 'react';
+import PostAdminForm from './Pjob';
+
+
 
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
 }
 
 const rows = [
-  createData('computer', 'Electronic', 69, 111324, 'No expired'),
-  createData('sugar', 'feed', 90, 12337, '20/7/2024'),
-  createData('scanner', 'Electronic', 16, 65424, 'No Expired'),
+  createData('computer', 300, 69, 24, 40),
+  createData('sugar', 200, 90, 37, 43),
+  createData('scanner', 262, 16.0, 24, 6.0),
 ];
 
-export default function WareHouseTables() {
+export default function JobTable() {
   const [IsItem, setIsItems] = useState(false);
   
   const handleOpen = ()=>{
@@ -33,27 +35,29 @@ export default function WareHouseTables() {
       setIsItems(false)
   }
   return (
+    
     <>
-    <Modal open={IsItem} onCancel={handleClose} footer = {null}>
+       <Modal open={IsItem} onCancel={handleClose} footer = {null}>
   {
     setIsItems && (
-                <AddItems/>
+              <PostAdminForm/>
             )
   }
 
   </Modal>
-    <h1>WAREHOUSE-ITEMS</h1>
-    <TableContainer component={Paper}>
-<Button onClick={ handleOpen } className='add'>ADD-ITEMS</Button>
+    <div className='dem'>
+    <h1>JOB-TABLE</h1>
+ <TableContainer component={Paper}>
+ <Button className='add' onClick={handleOpen}>ADD-JOBS</Button>
       <Table sx={{ minWidth: 650 }} aria-label="caption table">
         <caption>WareHouse all items</caption>
         <TableHead>
+       
           <TableRow>
-            <TableCell><b className='th'>Name of Items</b></TableCell>
-            <TableCell align="right" ><b className='th'>Category</b></TableCell>
-            <TableCell align="right"><b className='th'>Quantity-Items</b></TableCell>
-            <TableCell align="right"><b className='th'>Serial-Number</b></TableCell>
-            <TableCell align="right"><b className='th'>Expired-Date</b></TableCell>
+          <TableCell><b className='th'>Job-Image</b></TableCell>
+            <TableCell align="right"><b className='th'>Job-Title</b></TableCell>
+            <TableCell align="right"><b className='th'>Job-Summary</b></TableCell>
+            <TableCell align="right"><b className='th'>Job-Description</b></TableCell>
             <TableCell align="center" colSpan={2}><b className='th'>OPTIONS</b></TableCell>
           </TableRow>
         </TableHead>
@@ -65,8 +69,7 @@ export default function WareHouseTables() {
               </TableCell>
               <TableCell align="right"><b className='td'>{row.calories}</b></TableCell>
               <TableCell align="right"><b className='td'>{row.fat}</b></TableCell>
-              <TableCell align="right"><b className='td'>{row.carbs}</b></TableCell>
-              <TableCell align="right"><b className='td'>{row.protein}</b></TableCell>
+            
               <TableCell align="right"><b className='btn-up'><BrowserUpdatedIcon/></b></TableCell>
               <TableCell align="right"><b className='btn-del'><DeleteIcon/></b></TableCell>
             </TableRow>
@@ -74,6 +77,10 @@ export default function WareHouseTables() {
         </TableBody>
       </Table>
     </TableContainer>
+
+    </div>
     </>
+   
   );
 }
+      

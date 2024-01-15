@@ -94,7 +94,35 @@
             }
         }
     }
-  
+    @media screen and (max-width:395px) {
+        .test{
+        
+            display: flex;
+            flex-direction: column;
+        }
+        .test-image{
+         width: 60%;
+         display: none;
+         
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:904px) {
+    .test-container{
+   
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        padding: 3rem;
+        gap: 3rem;
+       
+       
+    }
+    
+   
 }
 @media screen and (max-width:464px) {
     .test-container{
@@ -109,6 +137,7 @@
     
    
 }
+
 .tes{
     padding: 2.8rem 1rem 0;
     text-align: center;

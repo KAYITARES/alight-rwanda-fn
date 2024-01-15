@@ -5,7 +5,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LocalAtmIcon from '@mui/icons-material/LocalAtm';
 import EditNotificationsIcon from '@mui/icons-material/EditNotifications';
 
-import Pjob from "../postjob/postjob";
+
 import Program from "../postPrograms/programsPost";
 
 
@@ -137,7 +137,7 @@ export default function DashHome(){
       
             <main className="main-container">
           
-            <Pjob/>
+            {/* <Pjob/> */}
             <Program/>
             <div className="main-title">
                 <h3>DASHBOARD</h3>

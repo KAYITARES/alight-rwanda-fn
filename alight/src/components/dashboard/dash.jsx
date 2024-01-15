@@ -5,7 +5,6 @@ import MuiDrawer from '@mui/material/Drawer';
 import MuiAppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import CssBaseline from '@mui/material/CssBaseline';
-
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -15,8 +14,9 @@ import DashHome from './dashHome';
 import Sidebar from './sidebar';
 import TableBlog from './PostBlogs/blogtable';
 import WareHouseTables from './dashtable';
-
 import HeaderDash from './navbar';
+import JobTable from './postjob/jobTable';
+
 
 
 const drawerWidth = 240;
@@ -86,7 +86,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
   }),
 );
 
-export default function MiniDrawer() {
+export default function Dash() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -136,7 +136,7 @@ export default function MiniDrawer() {
      <DashHome/>
       <WareHouseTables/>
        <TableBlog/>
-      
+    <JobTable/>
       </Box>
     </Box>
     </>

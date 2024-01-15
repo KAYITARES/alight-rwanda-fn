@@ -31,6 +31,26 @@
     float: right;
  
 }
-// .demo{
-//     display: none;
-// }
+.demo{
+    display: none;
+}
+.login-container{
+    padding: 2rem;
+    .form{
+    
+        width: 100%;
+        padding: 2rem 1rem;
+        h1{
+            text-align: center;
+            padding: 0rem 1rem 2rem; 
+            font-size: 2.9rem;
+        }
+    .fld{
+        width: 100%;
+        input{
+            width: 100%;
+        }
+    }
+       
+    }
+}

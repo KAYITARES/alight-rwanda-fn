@@ -13,6 +13,7 @@ import Jobs from './pages/jobs';
 import GetOneJobs from './pages/getOneJobs';
 import ReadmorePage from './pages/getReadmorep';
 import Dashboards from './pages/dashboard';
+import Post from './components/dashboard/PostBlogs/blogsForm';
 // import Dashboards from './pages/dashboards';
 
 
@@ -33,6 +34,7 @@ function App() {
         {/* <Route path='/dashboard' element = {<Dashboards/>}></Route>
         <Route path='/dashboards' element = {<Dashboard/>}></Route> */}
       <Route path='/dashboards' element = {<Dashboards/>}></Route> 
+      <Route path='/blogpost' element = {<Post/>}></Route>
       </Routes>
     </Router>
   
