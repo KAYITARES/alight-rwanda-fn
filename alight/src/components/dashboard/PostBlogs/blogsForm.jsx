@@ -1,76 +1,81 @@
-import { Button } from "antd";
-import React from "react";
-import { useState } from "react";
+import { Button } from "@mui/material";
+import React, { useState } from "react";
 import axios from "axios";
+
+
+
 
 export default function Post(){
 
-    const [isBlogs,setIsBlogs] = useState({
-        BlogTitle : '',
+    const[blogData,setBlogData] = useState({
+        BlogTitle :'',
         BlogSummary : '',
         BlogDiscription : '',
-        BlogImage : '',
+        BlogImage : [],
         PostedDate : '',
+
     });
 
-    const HandleInputBlog = (e) =>{
-       setIsBlogs ({
-        ...isBlogs,
-        [e.target.name] : e.target.value
-       })
+    const HandleInputLogin = (e) => {
+   setBlogData({
+    ...blogData,
+    [e.target.name] : e.target.value
+   })
     };
-    const Submit = async (e) =>{
+
+    const HandleLogin =async (e) => {
         e.preventDefault();
 
         try {
-            const api = "";
-            const response = await axios.post(api,isBlogs);
+            const apiBlogs = "http://localhost:3030/api/v1/blog";
+            const response =await axios.post (apiBlogs,blogData);
 
             const {token,Role} = response.data;
 
-            localStorage.setItem = ('auth-token',token);
+            localStorage.setItem =('auth-token',token);
             if(Role === 'user'){
                 alert('u are a user')
             }else if(Role === 'admin'){
                 alert('u are an admin')
             }
-            console.log('BlogPosted succeccful',response.data)
+            console.log('Blogs posted succeccful',response.data)
         } catch (error) {
            alert( error.response.data.message);
 
         }
     }
+
     return (
         <>
-       <div className="post-form">
-                <div className="forms">
-                <h2>blog-form</h2>
-                <form onSubmit={Submit}>
-                <div className="form">
-                    <label>Blog-Title</label>
-                    <input onChange={HandleInputBlog} value={isBlogs.BlogTitle} type="text" name="title" placeholder="Blog-title" className="input"/>
+       
+            <div className="login-container">
+            <h1>Login Form</h1>
+            <div className="login">
+            <form onSubmit={HandleLogin}>
+                <div className="fld">
+                <label htmlFor="BlogTitle">BlogTitle:</label>
+                    <input type="text" name="BlogTitle" value={blogData.BlogTitle} onChange={HandleInputLogin} placeholder="enter BlogTitle"/>
                 </div>
-                <div className="form">
-                    <label>Blog-Summary</label>
-                    <input onChange={HandleInputBlog} value={isBlogs.BlogSummary} type="text" name="summary" placeholder="Blog-Summary" className="input"/>
+                <div className="fld">
+                <label htmlFor="BlogSummary">BlogSummary:</label>
+                    <input type="text" name="BlogSummary" value={blogData.BlogSummary} onChange={HandleInputLogin}  placeholder="enter BlogSummary"/>
                 </div>
-                <div className="form">
-                    <label>Blog-Description</label>
-                    <input onChange={HandleInputBlog} value={isBlogs.BlogDiscription} type="text" name="title" placeholder="Blog-Description" className="input"/>
+                <div className="fld">
+                <label htmlFor="BlogDiscription">BlogDiscription:</label>
+                    <input type="text" name="BlogDiscription" value={blogData.BlogDiscription} onChange={HandleInputLogin}  placeholder="enter BlogDiscription"/>
                 </div>
-                <div className="form">
-                  
-                    <input onChange={HandleInputBlog} value={isBlogs.BlogImage} type="file" name="image" className="file"/>
+                <div className="fld">
+                <label htmlFor="BlogImage">BlogImage:</label>
+                    <input type="text" name="BlogImage" value={blogData.BlogImage} onChange={HandleInputLogin}  placeholder="enter BlogImage"/>
                 </div>
-                <div className="post-btn">
-                  
-                    <Button className="btn" type="submit">POST-BLOG</Button>
+                
+                <div className="log">
+              <Button className="log-btn" type="submit">Post-Blogs</Button>
                 </div>
                 </form>
-               
-                </div>
-          
-                </div>
+            </div>
+                
+            </div>
         </>
     )
 }

@@ -2,6 +2,7 @@ import { Button } from "@mui/material";
 import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import {jwtDecode} from 'jwt-decode';
 
 
 
@@ -14,7 +15,7 @@ export default function Login(){
         Email :'',
         Password : '',
     });
-
+    const [userRole, setUserRole] = useState(null);
     const HandleInputLogin = (e) => {
    setloginData({
     ...loginData,
@@ -22,35 +23,38 @@ export default function Login(){
    })
     };
 
-    const HandleLogin =async (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
-
+    
         try {
-            const apiLogin = "http://localhost:3030/api/v1/user/login";
-            const response =await axios.post (apiLogin,loginData);
+          const apiLogin = "http://localhost:3030/api/v1/user/login";
+          const response = await axios.post(apiLogin, loginData);
+    
+          const { token } = response.data;
+    
+          localStorage.setItem('auth-token', token);
+    
+          // Decode the token to get user information, including the role
+          const decodedToken = jwtDecode(token);
+          setUserRole(decodedToken.role);
+    
+          console.log('Login successful', response.data);
+          if(userRole ==='admin'){
+            alert('Welcome, admin!')
 
-            const {token,Role} = response.data;
-
-            localStorage.setItem =('auth-token',token);
-            if(Role === 'user'){
-                alert('u are a user')
-            }else if(Role === 'admin'){
-                alert('u are an admin')
-            }
-            console.log('login succeccful',response.data)
+          }else{
+            alert('Welcome, user!')
+          }
         } catch (error) {
-           alert( error.response.data.message);
-
+          alert(error.response.data.message);
         }
-    }
-
+      };
     return (
         <>
-       
             <div className="login-container">
             <h1>Login Form</h1>
             <div className="login">
-            <form onSubmit={HandleLogin}>
+            <form onSubmit={handleLogin}>
                 <div className="fld">
                 <label htmlFor="Email">Email:</label>
                     <input type="text" name="Email" value={loginData.Email} onChange={HandleInputLogin} placeholder="enter email"/>
