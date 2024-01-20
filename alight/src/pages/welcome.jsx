@@ -38,7 +38,7 @@ function Welcome(){
    
         fetchData([]);
       }, []);
-      console.log(isData);
+
 
     return(
         <>

@@ -18,7 +18,7 @@ return(
              <h3>{props.name}</h3>
             <p>{props.desc}</p>
             <a href="@" onClick={()=>alert("werr")}><Buttons name = "read more" fontsize = '1.6rem'/></a>
-            <p style={{marginLeft : '200px'}}>{props.date}</p>
+            <p style={{marginLeft : '200px'}} className="dat">{props.date}</p>
              </div>  
         
         </div>

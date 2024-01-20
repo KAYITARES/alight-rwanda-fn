@@ -16,6 +16,7 @@ import TableBlog from './PostBlogs/blogtable';
 import WareHouseTables from './dashtable';
 import HeaderDash from './navbar';
 import JobTable from './postjob/jobTable';
+import ExportTable from './export/exTable';
 
 
 
@@ -135,6 +136,7 @@ export default function Dash() {
         <DrawerHeader />
      <DashHome/>
       <WareHouseTables/>
+      <ExportTable/>
        <TableBlog/>
     <JobTable/>
       </Box>

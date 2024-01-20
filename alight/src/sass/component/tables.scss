@@ -30,9 +30,10 @@
     float: right;
  
 }
-.demo{
+.demo,.dem{
     display: none;
 }
+
 .login-container{
     padding: 2rem;
     .form{
@@ -52,4 +53,8 @@
     }
        
     }
+}
+.dat{
+    font-size:.2rem;
+   
 }

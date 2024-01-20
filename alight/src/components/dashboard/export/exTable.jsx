@@ -11,12 +11,12 @@ import Paper from '@mui/material/Paper';
 import { Button } from "antd";
 import { useState,useEffect } from "react";
 import {Modal} from 'antd'
-import AddItems from './additem';
+// import AddItems from './additem';
 import axios from 'axios';
 
 
 
-export default function WareHouseTables() {
+export default function ExportTable() {
   const [IsItem, setIsItems] = useState(false);
   const[isDatas,setIsDatas] = useState(null);
 
@@ -44,23 +44,25 @@ useEffect(()=>{
     <Modal open={IsItem} onCancel={handleClose} footer = {null}>
   {
     setIsItems && (
-                <AddItems/>
+                {/* <AddItems/> */}
             )
   }
 
   </Modal>
-    <h1>WAREHOUSE-ITEMS</h1>
+    <h1>EXPORT-ITEMS</h1>
     <TableContainer component={Paper}>
 <Button onClick={ handleOpen } className='add'>ADD-ITEMS</Button>
       <Table sx={{ minWidth: 650 }} aria-label="caption table">
         <caption>WareHouse all items</caption>
         <TableHead>
           <TableRow>
-            <TableCell><b className='th'>Name of Items</b></TableCell>
-            <TableCell align="right" ><b className='th'>Category</b></TableCell>
-            <TableCell align="right"><b className='th'>Quantity-Items</b></TableCell>
-            <TableCell align="right"><b className='th'>Serial-Number</b></TableCell>
-            <TableCell align="right"><b className='th'>Expired-Date</b></TableCell>
+            <TableCell><b className='th'>Product Name</b></TableCell>
+            <TableCell align="right" ><b className='th'>Request Name</b></TableCell>
+            <TableCell align="right"><b className='th'> Request Phone</b></TableCell>
+            <TableCell align="right"><b className='th'>Request Email</b></TableCell>
+            <TableCell align="right"><b className='th'>Request Location</b></TableCell>
+            <TableCell align="right"><b className='th'>Request Qauntity</b></TableCell>
+            <TableCell align="right"><b className='th'>Request Time</b></TableCell>
             <TableCell align="center" colSpan={2}><b className='th'>OPTIONS</b></TableCell>
           </TableRow>
         </TableHead>
