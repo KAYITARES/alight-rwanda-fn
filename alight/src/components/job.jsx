@@ -1,5 +1,4 @@
 import React from "react";
-import jobs from '../assets/jobs/job.json'
 import { Button } from "@mui/material";
 import { Image } from 'antd';
 import 'aos/dist/aos.css';
@@ -8,13 +7,27 @@ import {Modal} from 'antd'
 import { useState } from "react";
 import { useEffect } from "react";
 import FormJob from "./jobform";
+import axios from "axios";
 
 export default function Job(){
 
 
   // const [isInput, setIsInput] = useState(false)
   const [IsJob, setIsJob] = useState(false);
-  
+  const [jobData,setJobData] = useState(null)
+
+  useEffect(()=>{
+    const fetchData = async () =>{
+      try {
+        const response = await axios.get('http://localhost:3030/api/v1/job')
+        setJobData(response.data)
+      } catch (error) {
+        console.log('error',error)
+      }
+    };
+    fetchData([])
+  },[])
+  console.log(jobData)
   const handleOpen = ()=>{
       setIsJob(true)
   }
@@ -37,7 +50,7 @@ export default function Job(){
   </Modal>
 
                    <div className="test-container" >
-             {jobs.map((jobx)=>(
+             {jobData ? (jobData.data.map((jobx)=>(
                
                 <div className="test" data-aos='zoom-in-up'>
             <div className="job-image">
@@ -49,11 +62,11 @@ export default function Job(){
             </div>
             <div className="test-text">
         <div className="tit">
-        <h1 className="title">{jobx.jobSummaryDescription}</h1>
+        <h2 className="title">{jobx.jobSummaryDescription}</h2>
         <h1 className="title">{jobx.jobTitle}</h1>
-         <p className="desc">{jobx.jobAllInfo}</p>
-         <p className="desc">{jobx.jobLocation}</p>
-         <p className="desc">{jobx.jobCriteria}</p> 
+         {/* <p className="desc">{jobx.jobAllInfo}</p> */}
+         {/* <p className="desc">{jobx.jobLocation}</p> */}
+         {/* <p className="desc">{jobx.jobCriteria}</p>  */}
          <p className="desc">{jobx.deadLine}</p>
          <p className="desc">{jobx.publisherDate}</p>
         </div>
@@ -62,7 +75,9 @@ export default function Job(){
             </div>
           </div>
                 
-             ))}
+             ))): (
+              <p>Loading...</p>
+             )}
           
 
           </div>
