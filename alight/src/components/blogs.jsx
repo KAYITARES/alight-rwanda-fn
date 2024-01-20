@@ -1,15 +1,28 @@
 import React from "react";
 import { Image } from "antd";
 import { Button } from "@mui/material";
-import ThumbUpIcon from '@mui/icons-material/ThumbUp';
-import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
-import MapsUgcIcon from '@mui/icons-material/MapsUgc';
-import Blog from '../assets/constant/blogs.json';
+// import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+// import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
+// import MapsUgcIcon from '@mui/icons-material/MapsUgc';
+
 import 'aos/dist/aos.css';
 import AOS from 'aos';
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
+import axios from "axios";
 
 export default function Blogs(){
+    const [isBlog,setIsBlog] = useState(null)
+    useEffect(()=>{
+       const fetchData = async () =>{
+        try {
+            const response = await axios.get('http://localhost:3030/api/v1/blog')
+            setIsBlog(response.data)
+        } catch (error) {
+            
+        }
+       }
+      fetchData([])
+    }, [])
     useEffect(()=>{
         AOS.init({duration:1200})
     },[])
@@ -18,32 +31,34 @@ export default function Blogs(){
           
           <div className="blog-container">
         
-            {Blog.reverse().map((blogx) => (
-              <div className="blog">
+            {isBlog ? (isBlog.data.reverse().map((blogx) => (
+              <div className="blog" key={isBlog._id}>
               <div className="blog-image" data-aos="zoom-in">
-              <Image width = {'100%'} height={'100%'} src= {blogx.newsImage}/>
+              <Image width = {'100%'} height={'100%'} src= {blogx.BlogImage}/>
              
               </div>
               <div className="blog-content"  data-aos="zoom-out">
-              <h3 className="title">{blogx.newsMainTitle}</h3>
-              <p className='short'>{blogx.newsSummaryDescription}</p>
+              <h3 className="title">{blogx.BlogTitle}</h3>
+              <p className='short'>{blogx.BlogSummary}</p>
+              <p className='short'>{blogx.BlogDiscription}</p>
 
-              <div className='icons'  data-aos="flip-left">
+              {/* <div className='icons'  data-aos="flip-left">
                             <div className='likes'>
                                 <ThumbUpIcon style={{ fontSize: "24px" }} />
-                                <p>{blogx.likes.length}</p>
+                                <p>{blogx.Likes.length}</p>
                             </div>
                             <div className='dislikes'>
                                 <ThumbDownOffAltIcon style={{ fontSize: "24px" }} />
-                                <p>{blogx.dislikes.length}</p>
+                                <p>{blogx.DisLikes.length}</p>
                             </div>
                             <div className='comment'>
                                 <MapsUgcIcon style={{ fontSize: "24px" }} />
-                                <p>{blogx.comment.length}</p>
+                                <p>{blogx.Comment.length}</p>
                             </div>
-                        </div>
+                        </div> */}
                         <div className='blog-btn'>
                             <Button> readmore</Button>
+                            <p className='short'>{blogx.PostedDate}</p>
                         </div>
               </div>
                     <div className="decription">
@@ -51,7 +66,9 @@ export default function Blogs(){
                     </div>
                     </div>
                 
-          ))}
+          ))): (
+            <p>Loading...</p>
+          )}
          
 
           </div>

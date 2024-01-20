@@ -9,10 +9,12 @@ import Abouts from './pages/aboutus';
 import Blog from './pages/blogsp';
 import Testimonials from './pages/testimonials';
 import Jobs from './pages/jobs';
-
+// import Dashboard from './components/dashboard1/dashboards';
 import GetOneJobs from './pages/getOneJobs';
 import ReadmorePage from './pages/getReadmorep';
-import Dashboards from './pages/dashboards';
+import Dashboards from './pages/dashboard';
+import Post from './components/dashboard/PostBlogs/blogsForm';
+// import Dashboards from './pages/dashboards';
 
 
 function App() {
@@ -29,7 +31,10 @@ function App() {
         <Route path='/job' element = {<Jobs/>}></Route>
         <Route path='/getjob' element = {<GetOneJobs/>}></Route>
         <Route path='/getreadmore' element = {<ReadmorePage/>}></Route>
-        <Route path='/dashboard' element = {<Dashboards/>}></Route>
+        {/* <Route path='/dashboard' element = {<Dashboards/>}></Route>
+        <Route path='/dashboards' element = {<Dashboard/>}></Route> */}
+      <Route path='/dashboards' element = {<Dashboards/>}></Route> 
+      <Route path='/blogpost' element = {<Post/>}></Route>
       </Routes>
     </Router>
   

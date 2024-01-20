@@ -4,9 +4,10 @@ import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LocalAtmIcon from '@mui/icons-material/LocalAtm';
 import EditNotificationsIcon from '@mui/icons-material/EditNotifications';
-import Post from "../postBlogs/post";
-import Pjob from "../postjob/postjob";
+
+
 import Program from "../postPrograms/programsPost";
+
 
 export default function DashHome(){
     const datas = [
@@ -135,8 +136,8 @@ export default function DashHome(){
         <>
       
             <main className="main-container">
-            <Post/>
-            <Pjob/>
+          
+            {/* <Pjob/> */}
             <Program/>
             <div className="main-title">
                 <h3>DASHBOARD</h3>
@@ -233,39 +234,7 @@ export default function DashHome(){
            
           
 
-            <div className="table-container">
-            <h1>Items of WareHouse</h1>
-            <h2>export from WareHouse this week</h2>
-            <div className="tables">
-            <table border={1}>
-                <tr>
-                    <th>Items-Name</th>
-                    <th>From</th>
-                    <th>to</th>
-                    <th>quantity</th>
-                </tr>
-                <tr>
-                    <td>computer/laptop</td>
-                    <td>computer/laptop</td>
-                    <td>computer/laptop</td>
-                    <td>computer/laptop</td>
-                </tr>
-                <tr>
-                    <td>computer/laptop</td>
-                    <td>computer/laptop</td>
-                    <td>computer/laptop</td>
-                    <td>computer/laptop</td>
-                </tr>
-                <tr>
-                    <td>computer/laptop</td>
-                    <td>computer/laptop</td>
-                    <td>computer/laptop</td>
-                    <td>computer/laptop</td>
-                </tr>
-                </table>
-            </div>
-                
-            </div>
+            
             </main>
         </>
     )
