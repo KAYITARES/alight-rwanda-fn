@@ -17,6 +17,7 @@ import WareHouseTables from './dashtable';
 import HeaderDash from './navbar';
 import JobTable from './postjob/jobTable';
 import ExportTable from './export/exTable';
+import ProgramsTable from './programdash.jsx/programTable';
 
 
 
@@ -139,6 +140,7 @@ export default function Dash() {
       <ExportTable/>
        <TableBlog/>
     <JobTable/>
+    <ProgramsTable/>
       </Box>
     </Box>
     </>

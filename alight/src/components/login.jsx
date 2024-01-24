@@ -40,6 +40,7 @@ export default function Login() {
         navigate(window.location.href='dashboards'); // Use navigate instead of history.push
       } else if (userRole === 'user') {
         alert('Welcome, user!');
+        navigate(window.location.href='welcome'); // Use navigate instead of history.push
       } else {
         alert('Tap login button again');
       }

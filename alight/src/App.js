@@ -22,7 +22,8 @@ function App() {
   <>
     <Router>
       <Routes>
-        <Route path='/' element = {<Welcome/>}></Route>
+      <Route path='/' element = {<Welcome/>}></Route>
+        <Route path='/welcome' element = {<Welcome/>}></Route>
         <Route path='/team' element = {<Tearm/>}></Route>
         <Route path='/signUp' element = {<SignUp/>}></Route>
         <Route path='/About' element = {<Abouts/>}></Route>

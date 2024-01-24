@@ -106,12 +106,6 @@ export default function SignUp(props) {
                     </form>
                     
                 </div>
-                <div className="right">
-                <h1>Continue with</h1>
-                <Buttons name="SignIn With Google" className="btn" fontsize = '1.4rem' background='#FC4A12'/>
-                <Buttons name="SignIn With instagram" className="btn" fontsize = '1.4rem' background='#295AD7'/>
-                <Buttons name="SignIn With twitter" className="btn" fontsize = '1.4rem' background='#4DCEEA'/>
-                </div>
             </div>
           
             </div>
