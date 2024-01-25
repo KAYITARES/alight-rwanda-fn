@@ -32,13 +32,14 @@ export default function Post(){
 
             const {token,Role} = response.data;
 
-            localStorage.setItem =('auth-token',token);
+            localStorage.getItem =('auth-token',token);
             if(Role === 'user'){
                 alert('u are a user')
             }else if(Role === 'admin'){
                 alert('u are an admin')
+                console.log('Blogs posted succeccful',response.data)
             }
-            console.log('Blogs posted succeccful',response.data)
+           
         } catch (error) {
            alert( error.response.data.message);
 

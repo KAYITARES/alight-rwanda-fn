@@ -35,9 +35,9 @@ export default function ProgramsForm(){
 
             localStorage.setItem =('auth-token',token);
             if(Role === 'user'){
-                alert('u are a user')
-            }else if(Role === 'admin'){
                 alert('YOU DO NOT HAVE ACCESS')
+            }else if(Role === 'admin'){
+                alert('posted')
             }
             console.log('Blogs posted succeccful',response.data)
         } catch (error) {
