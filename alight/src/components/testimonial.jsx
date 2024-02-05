@@ -1,12 +1,15 @@
 import React from "react";
 import { Image } from "antd";
-import ReadMore from "./readmore";
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 import axios from 'axios'
 import { useEffect,useState } from "react";
 
-
+function truncateText(text, maxLength) {
+    const words = text.split(' ');
+    const truncatedWords = words.slice(0, maxLength);
+    return truncatedWords.join(' ') + (words.length > maxLength ? '...' : '');
+}
 
 export default function Testmonial(){
     const[isTestimonial,setIsTestimonial] = useState(null)
@@ -25,7 +28,6 @@ export default function Testmonial(){
         fetchTestimonial([])
     }, [])
     console.log(isTestimonial)
-    const longText = 'Alight it opened a news school of coding in 2 camps it called nyabiheke coding school and also opened in'
     return(
         <>
              <div className="test-container">
@@ -38,9 +40,10 @@ export default function Testmonial(){
             </div>
             <div className="test-text">
             
-        <ReadMore text ={longText} maxLength={50}/>
+      
         <div className="tit">
         <h1 className="title">{testx.TestimonerName}</h1>
+        <p className="desc">{truncateText(testx.Testimonials,20)}</p>
          <p className="desc">{testx.TestimonerPosition}</p>
         
               

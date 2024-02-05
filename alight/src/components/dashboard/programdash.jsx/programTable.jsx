@@ -9,6 +9,11 @@ import { Modal } from 'antd';
 import ProgramsForm from './programForm';
 // import ReadMore from '../../readmore';
 
+function truncateText(text, maxLength) {
+  const words = text.split(' ');
+const truncatedWords = words.slice(0, maxLength);
+ return truncatedWords.join(' ') + (words.length > maxLength ? '...' : '');
+}
 
 export default function ProgramsTable() {
   const [IsItem, setIsItems] = useState(false);
@@ -68,10 +73,10 @@ export default function ProgramsTable() {
         {
           records ? (records.data.map((blog)=>(
             <TableRow key={blog._id}>
-                <TableCell><b className='td'>{blog.ProgramName}</b></TableCell>
-                <TableCell><b className='td'>{blog.ProgramTitle}</b></TableCell>
-                <TableCell><b className='td'>{blog.ProgramSummaryDiscription}</b></TableCell>
-                <TableCell><b className='td'>{blog.ProgramDiscription}</b></TableCell>
+                <TableCell><b className='td'>{truncateText(blog.ProgramName,2)}</b></TableCell>
+                <TableCell><b className='td'>{truncateText(blog.ProgramTitle,2)}</b></TableCell>
+                <TableCell><b className='td'>{truncateText(blog.ProgramSummaryDiscription,4)}</b></TableCell>
+                <TableCell><b className='td'>{truncateText(blog.ProgramDiscription,4)}</b></TableCell>
                 <TableCell><b className='td'>{blog.ProgramImage}</b></TableCell>
                 <TableCell><b className='td'>{blog.PostedDate}</b></TableCell>
                 <TableCell align="right"><Button className='btn-up'><BrowserUpdatedIcon/></Button></TableCell>

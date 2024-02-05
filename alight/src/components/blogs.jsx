@@ -4,11 +4,16 @@ import { Button } from "@mui/material";
 // import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 // import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
 // import MapsUgcIcon from '@mui/icons-material/MapsUgc';
-
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 import { useEffect,useState } from "react";
 import axios from "axios";
+
+// function truncateText(text, maxLength) {
+//     const words = text.split(' ');
+//     const truncatedWords = words.slice(0, maxLength);
+//     return truncatedWords.join(' ') + (words.length > maxLength ? '...' : '');
+// }
 
 export default function Blogs(){
     const [isBlog,setIsBlog] = useState(null)
@@ -40,8 +45,8 @@ export default function Blogs(){
               <div className="blog-content"  data-aos="zoom-out">
               <h3 className="title">{blogx.BlogTitle}</h3>
               <p className='short'>{blogx.BlogSummary}</p>
-              <p className='short'>{blogx.BlogDiscription}</p>
-
+              <p className="short">{blogx.BlogDiscription}</p>
+           
               {/* <div className='icons'  data-aos="flip-left">
                             <div className='likes'>
                                 <ThumbUpIcon style={{ fontSize: "24px" }} />

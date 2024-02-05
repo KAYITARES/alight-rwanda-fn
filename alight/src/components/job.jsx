@@ -9,6 +9,11 @@ import { useEffect } from "react";
 import FormJob from "./jobform";
 import axios from "axios";
 
+function truncateText(text, maxLength) {
+  const words = text.split(' ');
+  const truncatedWords = words.slice(0, maxLength);
+  return truncatedWords.join(' ') + (words.length > maxLength ? '...' : '');
+}
 export default function Job(){
 
 
@@ -62,7 +67,8 @@ export default function Job(){
             </div>
             <div className="test-text">
         <div className="tit">
-        <h2 className="title">{jobx.jobSummaryDescription}</h2>
+        <h2 className="title">{truncateText(jobx.jobSummaryDescription, 10)}</h2>
+     
         <h1 className="title">{jobx.jobTitle}</h1>
          {/* <p className="desc">{jobx.jobAllInfo}</p> */}
          {/* <p className="desc">{jobx.jobLocation}</p> */}

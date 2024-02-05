@@ -14,6 +14,11 @@ import { useState,useEffect } from 'react';
 import PostAdminForm from './Pjob';
 import axios from 'axios';
 
+function truncateText(text, maxLength) {
+    const words = text.split(' ');
+    const truncatedWords = words.slice(0, maxLength);
+     return truncatedWords.join(' ') + (words.length > maxLength ? '...' : '');
+ }
 
 export default function JobTable() {
   const [IsItem, setIsItems] = useState(false);
@@ -75,10 +80,10 @@ console.log(IsRecords)
               <TableCell component="th" scope="row">
                <b className='td'> {records.jobpicture}</b>
               </TableCell>
-              <TableCell align="right"><b className='td'>{records.jobTitle}</b></TableCell>
-              <TableCell align="right"><b className='td'>{records.jobSummaryDescription}</b></TableCell>
+              <TableCell align="right"><b className='td'>{truncateText(records.jobTitle,1)}</b></TableCell>
+              <TableCell align="right"><b className='td'>{truncateText(records.jobSummaryDescription,2)}</b></TableCell>
               <TableCell align="right"><b className='td'>{records.jobLocation}</b></TableCell>
-              <TableCell align="right"><b className='td'>{records.publisherDate}</b></TableCell>
+              <TableCell align="right"><b className='td'>{truncateText(records.publisherDate,1)}</b></TableCell>
               <TableCell align="right"><b className='td'>{records.deadLine}</b></TableCell>
               <TableCell align="right"><b className='td'>{records.jobCriteria}</b></TableCell>
               <TableCell align="right"><Button className='btn-up'><BrowserUpdatedIcon/></Button></TableCell>

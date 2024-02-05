@@ -9,6 +9,7 @@ import { Modal } from 'antd';
 // import ReadMore from '../../readmore';
 
 
+
 export default function WareHouseTable() {
   const [IsItem, setIsItems] = useState(false);
   const [records, setRecords] = useState(null);
